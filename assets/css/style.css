@@ -6,8 +6,14 @@
 
 body {
     margin: 20px 0;
-    background: #6589F9;
+    background: red;
+    animation: mymove 5s infinite;
 }
+
+@keyframes mymove {
+    from {background-color: red;}
+    to {background-color: blue;}
+  }
 
 h1{
     text-align: center;
