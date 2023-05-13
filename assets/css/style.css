@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,700,900,400italic,700italic,900italic);
-
+@import "compass/css3";
 
 *,
 *::before,
@@ -11,6 +11,10 @@ body {
     margin: 20px 0;
     background: red;
     animation: changeBackgroundColor 7s infinite;
+    font-family: monospace;
+    padding-top: 5em;
+    display: flex;
+    justify-content: center;
 }
 
 @keyframes changeBackgroundColor {
@@ -25,70 +29,29 @@ body {
     }
   }
 
-h1{
-    font-size: 5em;
-    font-weight: 900;
-    line-height: 1;
+.typewriter h1 {
+    font-size: 24px;
+    color: white;
     text-align: center;
-    animation: text-shadow 1.5s ease-in-out infinite;
-}
-h1:hover {
-    animation-play-state: paused;
-}
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .10em; 
+    animation: 
+      typing 3.5s steps(20, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 50% }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+  }
 
-@keyframes text-shadow {
-    0% {  
-        transform: translateY(0);
-        text-shadow: 
-            0 0 0 #0c2ffb, 
-            0 0 0 #2cfcfd, 
-            0 0 0 #fb203b, 
-            0 0 0 #fefc4b;
-    }
-
-    20% {  
-        transform: translateY(-1em);
-        text-shadow: 
-            0 0.125em 0 #0c2ffb, 
-            0 0.25em 0 #2cfcfd, 
-            0 -0.125em 0 #fb203b, 
-            0 -0.25em 0 #fefc4b;
-    }
-
-    40% {  
-        transform: translateY(0.5em);
-        text-shadow: 
-            0 -0.0625em 0 #0c2ffb, 
-            0 -0.125em 0 #2cfcfd, 
-            0 0.0625em 0 #fb203b, 
-            0 0.125em 0 #fefc4b;
-    }
-    
-   60% {
-        transform: translateY(-0.25em);
-        text-shadow: 
-            0 0.03125em 0 #0c2ffb, 
-            0 0.0625em 0 #2cfcfd, 
-            0 -0.03125em 0 #fb203b, 
-            0 -0.0625em 0 #fefc4b;
-    }
-
-    80% {  
-        transform: translateY(0);
-        text-shadow: 
-            0 0 0 #0c2ffb, 
-            0 0 0 #2cfcfd, 
-            0 0 0 #fb203b, 
-            0 0 0 #fefc4b;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    * {
-      animation: none !important;
-      transition: none !important;
-    }
-}
 .grid {
     max-width: 960px;
     margin: 0 auto;
@@ -120,6 +83,7 @@ h1:hover {
 .front {
     z-index: 2;
     background: #FAB942 no-repeat center center / contain;
+    animation: text-shadow 1.5s ease-in-out infinite;
 }
 
 .back {
