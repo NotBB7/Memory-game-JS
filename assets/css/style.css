@@ -29,7 +29,6 @@ body {
       background-color: #001F3F;
     }
   }
-
 .typewriter h1 {
     font-size: 24px;
     color: white;
@@ -104,12 +103,12 @@ body {
 }  
 
 .carte  {
-    min-height: 30vh;
-    border: 10px solid transparent;
+    min-height: 20vh;
+    border: 5px solid transparent;
     background-image: linear-gradient(#222, #222), var(--gradient);
     background-origin: border-box;
     background-clip: padding-box, border-box;
-    border-radius: 5px;
+    border-radius: 2px;
     position: relative;
     animation: animatedgradient 30s linear alternate infinite;
     background-size: 400% 400%;
