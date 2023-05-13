@@ -28,11 +28,11 @@ for (let i=0; i < gameGrid.length; i++ ){
     card.classList.add('card');
     card.dataset.name = gameGrid[i].name
 
-    //front of the card
+    //Recto de la varte
     let front = document.createElement('div');
     front.classList.add('front');
 
-    //back of the card
+    //Verso de la carte
     let back = document.createElement('div');
     back.classList.add('back');
     back.style.backgroundImage = `url(${gameGrid[i].img})`;
