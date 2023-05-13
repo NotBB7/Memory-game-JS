@@ -5,6 +5,7 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -100,5 +101,43 @@ body {
 
 .match .front {
     background: #6589F9 !important;
-}
+}  
+
+.carte  {
+    min-height: 30vh;
+    border: 10px solid transparent;
+    background-image: linear-gradient(#222, #222), var(--gradient);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    border-radius: 5px;
+    position: relative;
+    animation: animatedgradient 30s linear alternate infinite;
+    background-size: 400% 400%;
+  }
+  
+  .carte::after {
+    content: attr(style);
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    line-height: 1.5;
+  }
+  
+  .dotted {
+    background-size: 2px 2px;
+  }
+  
+  @keyframes animatedgradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 150%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
   
